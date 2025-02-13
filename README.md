@@ -5,6 +5,12 @@ Aider les futurs professionnels du bâtiment à relever le défi de la rénovati
 > [!NOTE]  
 > Projet en cours de développement.
 
+## L'essentiel
+
+Le programme des Ambassadeurs de la Rénovation vise à développer une culture commune de la performance énergétique chez les futurs professionnels du bâtiment en adaptant les programmes pédagogiques FEEBAT aux besoins des formateurs, apprenants et organismes de formation.
+
+Pour y parvenir, nous développons des communs pédagogiques (fiches synthétiques, supports d'évaluation) libres d'accès et parions sur l'utilisation d'outils numériques open source pour permettre aux apprenants s'approprier le sujet de la rénovation énergétique par la pratique en situation réelle.
+
 ## Contexte
 
 Chaque année près de 50 000 jeunes sont formés à un métier relevant de la rénovation énergétique (maçon, couvreur, plaquiste, chauffagiste…). Cependant, très peu d'entre eux sortent de leurs parcours de formation avec les compétences leur permettant de contribuer à l'un des plus grands enjeux depuis la reconstruction d'après-guerre : rénover l'ensemble du parc résidentiel à un niveau BBC à l'horizon 2050.
@@ -13,7 +19,7 @@ La généralisation d'une culture commune de la performance énergétique chez l
 
 Cette ingénierie pédagogique doit cependant être adaptée aux réalités des organismes de formation qui ne disposent pas tous des même capacités d'intégration des contenus aux parcours de formation existants.
 
-## Problèmes
+## Enjeux
 
 Généraliser un programme de formation à la rénovation énergétique à des centaines de qualifications professionnelles couvrant une dizaine de métiers différents pose de nombreuses questions d'intégration pédagogique.
 
@@ -47,16 +53,3 @@ Toutes les ressources produites dans le cadre du programme des Ambassadeurs de l
 ## Stratégie
 
 En partenariat avec le BTP CFA d'Occitanie, le programme des Ambassadeurs de la rénovation sera expérimenté en 2025. L'objectif à moyen terme est d'être étendu sur l'ensemble du territoire national en lien avec les programmes existants (FEEBAT, France Rénov').
-
-## Budget
-
-Les Ambassadeurs de la rénovation est un projet d'intérêt général, c'est pourquoi nous sommes transparents sur les ressources allouées et la manière dont elles sont employées. Le projet est financé par le CCCA-BTP dans le cadre de ses appels à projets.
-
-|        2024-2025         |      Total       |
-| :----------------------: | :--------------: |
-|      Développement       |   367 800.00 €   |
-|       Déploiement        |   42 350.00 €    |
-|        Animation         |   41 825.00 €    |
-|         Pilotage         |   71 340.00 €    |
-|        **Total**         | **523 315.00 €** |
-| **Financement CCCA-BTP** | **415 975.00 €** |
