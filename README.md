@@ -53,3 +53,13 @@ Toutes les ressources produites dans le cadre du programme des Ambassadeurs de l
 ## Stratégie
 
 En partenariat avec le BTP CFA d'Occitanie, le programme des Ambassadeurs de la rénovation sera expérimenté en 2025. L'objectif à moyen terme est d'être étendu sur l'ensemble du territoire national en lien avec les programmes existants (FEEBAT, France Rénov').
+
+## Porteurs
+
+### BTP CFA d'Occitanie
+
+L'association régionale BTP CFA OCCITANIE, appartient au réseau paritaire BTP CFA, l'outil de formation des branches professionnelles du BTP. Nous formons, dans nos 5 Campus des métiers de la construction (Montpellier, Perpignan, Toulouse-Muret, Lézignan-Corbières et Méjannes-Lès-Alès), près de 3 600 apprenants en alternance, et nous avons accompagné plus 400 jeunes dans le cadre de Prépa Apprentissage en proposant 67 formations certifiantes du CAP au BTS et Titres Professionnels.
+
+### Action 21
+
+ACTION 21 est une association loi 1901 de recherche, développement et de promotion de communs numériques pour faire face aux défis énergétiques et climatiques. Dans ce cadre, nous proposons des solutions d'intérêt général libres de droit (open source) pour produire des effets là où le marché seul échoue.
