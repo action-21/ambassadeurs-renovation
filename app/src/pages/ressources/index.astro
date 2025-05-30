@@ -1,0 +1,24 @@
+---
+import { ressources } from "../../data/ressources.ts";
+import { Container, Layout, Main, Section, Title } from "../../components/Layout";
+import { Ressources as Items } from "../../components/Ressources";
+---
+
+<Layout>
+    <Container size="md">
+        <Main>
+            <Section>
+                <Title>
+                    🧰 Ressources et outils
+
+                    <p slot="description">
+                        Vidéos, podcasts, quizz ou services pour tout savoir sur
+                        la rénovation énergétique.
+                    </p>
+                </Title>
+
+                <Items ressources={ressources} />
+            </Section>
+        </Main>
+    </Container>
+</Layout>

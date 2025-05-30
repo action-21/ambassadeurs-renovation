@@ -1,0 +1,103 @@
+---
+import Content from "../../contents/tutoriels/mon-audit.md";
+import { $audit } from "../../stores/user";
+import {
+    Container,
+    Layout,
+    Main,
+    Section,
+    Title,
+} from "../../components/Layout";
+
+export const prerender = false;
+
+if (Astro.request.method === "POST") {
+    try {
+        const data = await Astro.request.formData();
+        const adresse = data.get("adresse");
+    } catch (error) {}
+}
+---
+
+<Layout>
+    <Container size="md">
+        <Main>
+            <Section>
+                <Title>
+                    🤔 Comprendre la <span class="text-primary"
+                        >performance énergétique</span
+                    > des logements en <span class="text-primary"
+                        >quelques minutes</span
+                    >
+
+                    <div slot="description" class="markdown-body">
+                        <Content />
+                    </div>
+                </Title>
+
+                <form method="POST" class="grid gap-6">
+                    <label class="block font-medium">
+                        🌍 Quelle est l'adresse du logement ?
+                        <input
+                            class="input block w-full"
+                            type="text"
+                            placeholder="Entrez l'adresse"
+                            required
+                        />
+                    </label>
+                    <label class="block font-medium">
+                        📅 Année de construction ?
+
+                        <select class="select block w-full" multiple>
+                            <option value="avant_1948" selected>
+                                Avant 1948
+                            </option>
+                            <option value="1948_1974" selected>
+                                Entre 1948 et 1974
+                            </option>
+                            <option value="1975_1977" selected>
+                                Entre 1975 et 1977
+                            </option>
+                            <option value="1978_1982" selected>
+                                Entre 1978 et 1982
+                            </option>
+                            <option value="1983_1988" selected>
+                                Entre 1983 et 1988
+                            </option>
+                            <option value="1989_2000" selected>
+                                Entre 1989 et 2000
+                            </option>
+                            <option value="2001_2005" selected>
+                                Entre 2001 et 2005
+                            </option>
+                            <option value="2006_2012" selected>
+                                Entre 2006 et 2012
+                            </option>
+                            <option value="2013_2021" selected>
+                                Entre 2013 et 2021
+                            </option>
+                            <option value="apres_2021" selected>
+                                Après 2021
+                            </option>
+                        </select>
+                    </label>
+                    <label class="block font-medium">
+                        🏡 Etiquettes énergie ?
+
+                        <select class="select block w-full" multiple>
+                            <option value="A" selected>A</option>
+                            <option value="B" selected>B</option>
+                            <option value="C" selected>C</option>
+                            <option value="D" selected>D</option>
+                            <option value="E" selected>E</option>
+                            <option value="F" selected>F</option>
+                            <option value="G" selected>G</option>
+                        </select>
+                    </label>
+
+                    <a class="btn btn-primary w-fit" href="/mon-audit">Rechercher</a>
+                </form>
+            </Section>
+        </Main>
+    </Container>
+</Layout>

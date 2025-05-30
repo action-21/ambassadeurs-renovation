@@ -1,0 +1,17 @@
+---
+import Action21Logo from "../../assets/logo-action21.svg";
+import BTPCFAOccitanieLogo from "../../assets/logo-btp-cfa-occitanie.svg";
+
+interface Props {
+    class?: string;
+}
+
+const { class: className = "" } = Astro.props;
+---
+
+<div class:list={["px-14 py-6", className]}>
+    <div class="grid gap-8 grid-flow-col items-center">
+        <BTPCFAOccitanieLogo class="w-[120px]" />
+        <Action21Logo class="w-[120px]" />
+    </div>
+</div>

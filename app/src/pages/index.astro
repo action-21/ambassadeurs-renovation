@@ -1,0 +1,45 @@
+---
+import { Layout } from "../components/Layout";
+import { Partenaires } from "../components/Partenaires";
+import AmbassadeurImg from "../assets/home-ambassadeur.svg";
+---
+
+<Layout>
+    <main class="bg-white">
+        <section class="bg-color px-6 py-12">
+            <div class="max-w-[1024px] m-auto">
+                <div class="grid grid-flow-col items-center gap-6">
+                    <div
+                        class="grow grid grid-flow-row grid-rows-min gap-6 text-center md:text-left"
+                    >
+                        <h1 class="text-4xl">
+                            Devenez un Ambassadeur de la rénovation énergétique
+                        </h1>
+                        <p class="text-xl">
+                            Evaluez l'impact <span
+                                class="color-primary font-semibold"
+                                >énergétique et carbone</span
+                            > d'un plan de rénovation en <span
+                                class="color-secondary font-semibold"
+                                >quelques minutes</span
+                            >.
+                        </p>
+                        <a
+                            href="./mon-audit/recherche"
+                            class="btn btn-lg btn-primary w-3xs m-auto md:m-0 rounded-full"
+                        >
+                            Commencer
+                        </a>
+                    </div>
+                    <div class="grow hidden md:block">
+                        <AmbassadeurImg class="w-full" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="-mt-6">
+            <Partenaires class="bg-white w-fit m-auto rounded-full" />
+        </section>
+    </main>
+</Layout>

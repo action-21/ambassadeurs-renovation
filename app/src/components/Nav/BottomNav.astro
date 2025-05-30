@@ -1,0 +1,49 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+    class?: string;
+}
+
+const { class: className = "" } = Astro.props;
+
+const pathname = Astro.url.pathname;
+
+const paths = [
+    { name: "/mon-audit", title: "Mon audit", icon: "search-building" },
+    { name: "/mes-gestes", title: "Mes gestes", icon: "target" },
+    { name: "/ressources", title: "Ressources", icon: "toolbox" },
+];
+
+const isActive = (path: string) => pathname.includes(path);
+---
+
+<nav class:list={["dock", className]}>
+    {
+        paths.map((path) => (
+            <a
+                href={path.name}
+                class:list={[{ "dock-active": isActive(path.name), "color-primary": isActive(path.name)}]}
+            >
+                <Icon name={path.icon} class="icon size-[1.4em]" />
+                <span class="dock-label">{path.title}</span>
+            </a>
+        ))
+    }
+</nav>
+
+<style>
+    a {
+        &.active {
+            border-color: var(--color-primary);
+
+            span {
+                font-weight: 500;
+                color: var(--color-primary);
+            }
+            [data-icon] {
+                color: var(--color-primary);
+            }
+        }
+    }
+</style>
