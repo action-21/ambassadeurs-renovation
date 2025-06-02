@@ -1,7 +1,7 @@
 ---
 import { ressources } from "../../data/ressources.ts";
 import { Container, Layout, Main, Section, Title } from "../../components/Layout";
-import { Ressources as Items } from "../../components/Ressources";
+import { Ressources as Collection } from "../../components/Collection";
 ---
 
 <Layout>
@@ -17,7 +17,7 @@ import { Ressources as Items } from "../../components/Ressources";
                     </p>
                 </Title>
 
-                <Items ressources={ressources} />
+                <Collection items={ressources} />
             </Section>
         </Main>
     </Container>

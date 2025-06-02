@@ -1,8 +1,7 @@
 ---
 import { useFixtures } from "../../fixtures/fixtures";
 import { $audit } from "../../stores/user";
-import Content from "../../contents/tutoriels/mes-gestes.md";
-import { Gestes } from "../../components/Gestes";
+import { gestes } from "../../data/gestes";
 import {
     Container,
     Layout,
@@ -10,14 +9,8 @@ import {
     Section,
     Title,
 } from "../../components/Layout";
-import { Tabs, TabsItem, TabsWindow } from "../../components/Tabs";
-import {
-    ConfortEte,
-    PerformanceClimatique,
-    PerformanceEnergetique,
-    PerformanceIsolation,
-    RepartitionDeperditions,
-} from "../../components/Audit";
+import { Gestes as Collection } from "../../components/Collection";
+import Content from "../../contents/tutoriels/mes-gestes.md";
 
 useFixtures();
 
@@ -40,7 +33,13 @@ if (null === audit) {
                     </div>
                 </Title>
 
-                <Gestes />
+                <div class="grid gap-6">
+                    <Collection items={gestes} />
+
+                    <a class="btn btn-primary w-fit" href="/mes-gestes">
+                        Améliorer
+                    </a>
+                </div>
             </Section>
         </Main>
     </Container>

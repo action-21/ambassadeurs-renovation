@@ -5,8 +5,9 @@
 }
 
 :root {
-  --bg-color: #F0F8FF;
-  --border-color: #F0F8FF;
+  --bg-color: #f0f8ff;
+  --border-color: #f0f8ff;
+  --color-disabled: #EDF1F6;
 }
 
 body {
@@ -22,6 +23,10 @@ ul {
 ol {
   list-style: decimal;
   padding-left: 1.5rem;
+}
+
+b {
+  font-weight: 600;
 }
 
 .bg-color {
@@ -50,6 +55,11 @@ ol {
 .color-error {
   color: var(--color-error);
   fill: var(--color-error);
+}
+
+.disabled {
+  color: var(--color-disabled);
+  fill: var(--color-disabled);
 }
 
 .icon-primary {

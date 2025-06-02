@@ -18,24 +18,24 @@ const { origin, target } = Astro.props;
 <Table title="Performances">
     <Row name="Performance de l'isolation">
         <IsolationEnveloppeChips
-            class="text-sm"
+            class="text-xs"
             slot="origin"
             value={origin.enveloppe.data?.performance}
         />
         <IsolationEnveloppeChips
-            class="text-sm"
+            class="text-xs"
             slot="target"
             value={target.enveloppe.data?.performance}
         />
     </Row>
     <Row name="Confort d'été">
         <ConfortEteChips
-            class="text-sm"
+            class="text-xs"
             slot="origin"
             value={origin.enveloppe.data?.confort_ete}
         />
         <ConfortEteChips
-            class="text-sm"
+            class="text-xs"
             slot="target"
             value={target.enveloppe.data?.confort_ete}
         />

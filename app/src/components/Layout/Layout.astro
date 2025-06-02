@@ -1,9 +1,7 @@
 ---
-import { Content } from "dpe-audit-ui";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
 import { BottomNav } from "../Nav";
-import { Dialog, DialogHeader } from "../../components/Dialog";
 import "../../styles/global.css";
 
 const pathname = Astro.url.pathname;
@@ -27,38 +25,6 @@ const hideHeaderOnMobile = ["/mon-audit", "/mes-gestes"].includes(pathname);
 		<BottomNav class="md:hidden" />
 
 		<Footer />
-
-		<Dialog name="repartition-consommations">
-			<DialogHeader>💡 Consommations conventionnelles</DialogHeader>
-			<Content name="consommations-energie" class="markdown-body" />
-		</Dialog>
-		<Dialog name="performance-enveloppe">
-			<DialogHeader>💡 Performances par élément</DialogHeader>
-			<Content
-				name="performance-isolation-parois"
-				class="markdown-body"
-			/>
-		</Dialog>
-		<Dialog name="performance-climatique">
-			<DialogHeader>💡 Performance climatique</DialogHeader>
-			<Content name="etiquette-energie" class="markdown-body" />
-		</Dialog>
-		<Dialog name="performance-energetique">
-			<DialogHeader>💡 Performance énergétique</DialogHeader>
-			<Content name="etiquette-climat" class="markdown-body" />
-		</Dialog>
-		<Dialog name="repartition-deperditions">
-			<DialogHeader>💡 Déperditions thermiques</DialogHeader>
-			<Content name="deperditions-thermiques" class="markdown-body" />
-		</Dialog>
-		<Dialog name="confort-ete">
-			<DialogHeader>💡 Confort d'été</DialogHeader>
-			<Content name="confort-ete" class="markdown-body" />
-		</Dialog>
-		<Dialog name="performance-isolation">
-			<DialogHeader>💡 Performance de l'isolation</DialogHeader>
-			<Content name="performance-isolation" class="markdown-body" />
-		</Dialog>
 	</body>
 </html>
 

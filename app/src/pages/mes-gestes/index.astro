@@ -1,11 +1,20 @@
 ---
 import { Audit } from "dpe-audit";
-import { useFixtures } from "../../fixtures/fixtures";
-import { $audit, $scenario } from "../../stores/user";
+import { loadScenario } from "../../fixtures/scenario";
+import { loadGestes } from "../../fixtures/gestes";
+import {
+	$audit,
+	$scenario,
+	setScenario,
+	$gestes,
+	setGestes,
+} from "../../stores/user";
 import { Container, Layout, Main } from "../../components/Layout";
+import { Dialog, DialogHeader } from "../../components/Dialog";
 import {
 	ConfortEte,
 	Consommations,
+	Gestes,
 	InformationLogement,
 	PerformanceClimatique,
 	PerformanceEnergetique,
@@ -15,10 +24,13 @@ import {
 } from "../../components/Audit";
 import { Comparaison } from "../../components/Comparaison";
 import { GesteActions } from "../../components/Actions";
+import Content from "../../components/Content.astro";
 
-useFixtures();
+setScenario(loadScenario());
+setGestes(loadGestes().map((item) => item.titre));
 
 const audit = $audit.get();
+const gestes = $gestes.get();
 const scenario = $scenario.get();
 
 if (null === audit) {
@@ -49,24 +61,30 @@ if (null === scenario) {
 				<div
 					class="grid auto-rows-min auto-cols-min grid-cols-1 gap-6 md:grid-cols-2 lg:order-last lg:grid-cols-1"
 				>
+					<Gestes items={gestes} />
+
+					<div class="md:hidden">
+						<Comparaison origin={audit} target={scenario} />
+					</div>
+
 					<PerformanceEnergetique
-						etiquette_energie={audit.data.etiquette_energie}
-						cef={audit.data.cef}
-						cep={audit.data.cep}
+						etiquette_energie={scenario.data?.etiquette_energie}
+						cef={scenario.data?.cef}
+						cep={scenario.data?.cep}
 					/>
 
 					<PerformanceClimatique
-						etiquette_climat={audit.data.etiquette_climat}
-						eges={audit.data.eges}
+						etiquette_climat={scenario.data?.etiquette_climat}
+						eges={scenario.data?.eges}
 					/>
 					<PerformanceIsolation
-						performance={audit.enveloppe.data.performance}
+						performance={scenario.enveloppe.data?.performance}
 					/>
 					<ConfortEte
-						confort_ete={audit.enveloppe.data.confort_ete}
+						confort_ete={scenario.enveloppe.data?.confort_ete}
 					/>
 					<RepartitionDeperditions
-						deperditions={audit.enveloppe.data.deperditions}
+						deperditions={scenario.enveloppe.data?.deperditions}
 					/>
 				</div>
 				<div
@@ -74,23 +92,61 @@ if (null === scenario) {
 				>
 					<InformationLogement
 						class="hidden lg:block"
-						batiment={audit.batiment}
-						adresse={audit.adresse}
+						batiment={scenario.batiment}
+						adresse={scenario.adresse}
 					/>
-					<Comparaison origin={audit} target={scenario} />
+					<div class="hidden lg:block">
+						<Comparaison origin={audit} target={scenario} />
+					</div>
 
-					<Consommations consommations={audit.data.consommations} />
+					<Consommations consommations={scenario.data?.consommations} />
 
 					<PerformanceEnveloppe
-						murs={audit.enveloppe.murs}
-						planchers_bas={audit.enveloppe.planchers_bas}
-						planchers_hauts={audit.enveloppe.planchers_hauts}
-						baies={audit.enveloppe.baies}
-						portes={audit.enveloppe.portes}
-						ponts_thermiques={audit.enveloppe.ponts_thermiques}
+						murs={scenario.enveloppe.murs}
+						planchers_bas={scenario.enveloppe.planchers_bas}
+						planchers_hauts={scenario.enveloppe.planchers_hauts}
+						baies={scenario.enveloppe.baies}
+						portes={scenario.enveloppe.portes}
+						ponts_thermiques={scenario.enveloppe.ponts_thermiques}
 					/>
 				</div>
 			</div>
 		</Main>
 	</Container>
+
+	<Dialog name="confort-ete">
+		<DialogHeader>💡 Confort d'été</DialogHeader>
+		<Content name="confort-ete" class="markdown-body" />
+	</Dialog>
+	<Dialog name="consommations-energie">
+		<DialogHeader>💡 Consommations d'énergie</DialogHeader>
+		<Content name="consommations-energie" class="markdown-body" />
+	</Dialog>
+	<Dialog name="deperditions-thermiques">
+		<DialogHeader>💡 Déperditions thermiques</DialogHeader>
+		<Content name="deperditions-thermiques" class="markdown-body" />
+	</Dialog>
+	<Dialog name="performance-climatique">
+		<DialogHeader>💡 Performance climatique</DialogHeader>
+		<Content name="performance-climatique" class="markdown-body" />
+	</Dialog>
+	<Dialog name="performance-energetique">
+		<DialogHeader>💡 Performance énergétique</DialogHeader>
+		<Content name="performance-energetique" class="markdown-body" />
+	</Dialog>
+	<Dialog name="performance-enveloppe">
+		<DialogHeader>💡 Performance de l'enveloppe</DialogHeader>
+		<Content name="performance-enveloppe" class="markdown-body" />
+	</Dialog>
+	<Dialog name="performance-isolation">
+		<DialogHeader>💡 Performance de l'isolation</DialogHeader>
+		<Content name="performance-isolation" class="markdown-body" />
+	</Dialog>
+	<Dialog name="comparaison">
+		<DialogHeader>💡 Comparaison</DialogHeader>
+		<Content name="comparaison" class="markdown-body" />
+	</Dialog>
+	<Dialog name="gestes">
+		<DialogHeader>💡 Gestes</DialogHeader>
+	</Dialog>
 </Layout>

@@ -10,9 +10,24 @@ const { class: className = "" } = Astro.props;
 const pathname = Astro.url.pathname;
 
 const paths = [
-    { name: "/mon-audit", title: "Mon audit", icon: "search-building" },
-    { name: "/mes-gestes", title: "Mes gestes", icon: "target" },
-    { name: "/ressources", title: "Ressources", icon: "toolbox" },
+    {
+        name: "/mon-audit/recherche",
+        title: "Mon audit",
+        icon: "search-building",
+        match: "/mon-audit",
+    },
+    {
+        name: "/mes-gestes/projet",
+        title: "Mes gestes",
+        icon: "target",
+        match: "/mes-gestes",
+    },
+    {
+        name: "/ressources",
+        title: "Ressources",
+        icon: "toolbox",
+        match: "/ressources",
+    },
 ];
 
 const isActive = (path: string) => pathname.includes(path);
@@ -23,7 +38,12 @@ const isActive = (path: string) => pathname.includes(path);
         paths.map((path) => (
             <a
                 href={path.name}
-                class:list={[{ "dock-active": isActive(path.name), "color-primary": isActive(path.name)}]}
+                class:list={[
+                    {
+                        "dock-active": isActive(path.match),
+                        "color-primary": isActive(path.name),
+                    },
+                ]}
             >
                 <Icon name={path.icon} class="icon size-[1.4em]" />
                 <span class="dock-label">{path.title}</span>
@@ -34,7 +54,7 @@ const isActive = (path: string) => pathname.includes(path);
 
 <style>
     a {
-        &.active {
+        &.dock-active {
             border-color: var(--color-primary);
 
             span {
@@ -43,6 +63,9 @@ const isActive = (path: string) => pathname.includes(path);
             }
             [data-icon] {
                 color: var(--color-primary);
+            }
+            &:after {
+                background-color: var(--color-primary);
             }
         }
     }

@@ -11,13 +11,14 @@ import Performances from "./Performances.astro";
 interface Props {
     origin: Audit.Audit;
     target: Audit.Audit;
+    class?: string;
 }
 
-const { origin, target } = Astro.props;
+const { origin, target, class: className = "" } = Astro.props;
 ---
 
 <Section>
-    <SectionHeader title="Confort d'été">
+    <SectionHeader title="Comparaison">
         <DialogButton name="comparaison" />
     </SectionHeader>
 

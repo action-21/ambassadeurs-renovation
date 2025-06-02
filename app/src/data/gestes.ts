@@ -13,32 +13,32 @@ export interface Geste {
 
 export interface GesteMur extends Geste {
   type: Type.murs
-  data: Partial<Enveloppe.Mur>
+  data: Partial<Enveloppe.IMur>
 }
 
 export interface GestePlancherBas extends Geste {
   type: Type.planchers_bas
-  data: Partial<Enveloppe.PlancherBas>
+  data: Partial<Enveloppe.IPlancherBas>
 }
 
 export interface GestePlancherHaut extends Geste {
   type: Type.planchers_hauts
-  data: Partial<Enveloppe.PlancherHaut>
+  data: Partial<Enveloppe.IPlancherHaut>
 }
 
 export interface GesteBaie extends Geste {
   type: Type.baies
-  data: Partial<Enveloppe.Baie>
+  data: Partial<Enveloppe.IBaie>
 }
 
 export interface GestePorte extends Geste {
   type: Type.portes
-  data: Partial<Enveloppe.Porte>
+  data: Partial<Enveloppe.IPorte>
 }
 
 export interface GesteVentilation extends Geste {
   type: Type.ventilation
-  data: Partial<Ventilation.Ventilation>
+  data: Partial<Ventilation.IVentilation>
 }
 
 export enum Type {
@@ -51,6 +51,29 @@ export enum Type {
   chauffage = 'chauffage',
   ecs = 'ecs',
   refroidissement = 'refroidissement'
+}
+
+export const typeToString = (type: Type): string => {
+  switch (type) {
+    case Type.murs:
+      return 'Murs'
+    case Type.planchers_bas:
+      return 'Planchers bas'
+    case Type.planchers_hauts:
+      return 'Planchers hauts'
+    case Type.baies:
+      return 'Baies'
+    case Type.portes:
+      return 'Portes'
+    case Type.ventilation:
+      return 'Ventilation'
+    case Type.chauffage:
+      return 'Chauffage'
+    case Type.ecs:
+      return 'ECS'
+    case Type.refroidissement:
+      return 'Refroidissement'
+  }
 }
 
 export type GesteDiscriminated =

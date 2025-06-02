@@ -1,8 +1,9 @@
 ---
 import { Audit } from "dpe-audit";
-import { $audit } from "../../stores/user";
-import { useFixtures } from "../../fixtures/fixtures";
+import { $audit, setAudit } from "../../stores/user";
+import { loadAudit } from "../../fixtures/audit";
 import { Container, Layout, Main } from "../../components/Layout";
+import { Dialog, DialogHeader } from "../../components/Dialog";
 import {
 	ConfortEte,
 	Consommations,
@@ -14,8 +15,10 @@ import {
 	RepartitionDeperditions,
 } from "../../components/Audit";
 import { AuditActions } from "../../components/Actions";
+import Content from "../../components/Content.astro";
 
-useFixtures();
+const useFixture = () => setAudit(loadAudit());
+useFixture()
 
 const audit = $audit.get();
 
@@ -45,23 +48,23 @@ if (null === audit) {
 					class="grid auto-rows-min auto-cols-min grid-cols-1 gap-6 md:grid-cols-2 lg:order-last lg:grid-cols-1"
 				>
 					<PerformanceEnergetique
-						etiquette_energie={audit.data.etiquette_energie}
-						cef={audit.data.cef}
-						cep={audit.data.cep}
+						etiquette_energie={audit.data?.etiquette_energie}
+						cef={audit.data?.cef}
+						cep={audit.data?.cep}
 					/>
 
 					<PerformanceClimatique
-						etiquette_climat={audit.data.etiquette_climat}
-						eges={audit.data.eges}
+						etiquette_climat={audit.data?.etiquette_climat}
+						eges={audit.data?.eges}
 					/>
 					<PerformanceIsolation
-						performance={audit.enveloppe.data.performance}
+						performance={audit.enveloppe.data?.performance}
 					/>
 					<ConfortEte
-						confort_ete={audit.enveloppe.data.confort_ete}
+						confort_ete={audit.enveloppe.data?.confort_ete}
 					/>
 					<RepartitionDeperditions
-						deperditions={audit.enveloppe.data.deperditions}
+						deperditions={audit.enveloppe.data?.deperditions}
 					/>
 				</div>
 				<div
@@ -73,7 +76,7 @@ if (null === audit) {
 						adresse={audit.adresse}
 					/>
 
-					<Consommations consommations={audit.data.consommations} />
+					<Consommations consommations={audit.data?.consommations} />
 
 					<PerformanceEnveloppe
 						murs={audit.enveloppe.murs}
@@ -87,4 +90,33 @@ if (null === audit) {
 			</div>
 		</Main>
 	</Container>
+
+	<Dialog name="confort-ete">
+		<DialogHeader>💡 Confort d'été</DialogHeader>
+		<Content name="confort-ete" class="markdown-body" />
+	</Dialog>
+	<Dialog name="consommations-energie">
+		<DialogHeader>💡 Consommations d'énergie</DialogHeader>
+		<Content name="consommations-energie" class="markdown-body" />
+	</Dialog>
+	<Dialog name="deperditions-thermiques">
+		<DialogHeader>💡 Déperditions thermiques</DialogHeader>
+		<Content name="deperditions-thermiques" class="markdown-body" />
+	</Dialog>
+	<Dialog name="performance-climatique">
+		<DialogHeader>💡 Performance climatique</DialogHeader>
+		<Content name="performance-climatique" class="markdown-body" />
+	</Dialog>
+	<Dialog name="performance-energetique">
+		<DialogHeader>💡 Performance énergétique</DialogHeader>
+		<Content name="performance-energetique" class="markdown-body" />
+	</Dialog>
+	<Dialog name="performance-enveloppe">
+		<DialogHeader>💡 Performance de l'enveloppe</DialogHeader>
+		<Content name="performance-enveloppe" class="markdown-body" />
+	</Dialog>
+	<Dialog name="performance-isolation">
+		<DialogHeader>💡 Performance de l'isolation</DialogHeader>
+		<Content name="performance-isolation" class="markdown-body" />
+	</Dialog>
 </Layout>

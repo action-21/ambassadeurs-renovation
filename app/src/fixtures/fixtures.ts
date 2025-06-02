@@ -4,9 +4,9 @@ import { $audit, setAudit, $scenario, setScenario } from '../stores/user'
 
 export const useFixtures = () => {
   if (null === $audit.get()) {
-    setAudit(fixture as Audit.AuditWithData)
+    setAudit(fixture as Audit.Audit)
   }
   if (null === $scenario.get()) {
-    setScenario(fixture as Audit.AuditWithData)
+    setScenario(fixture as Audit.Audit)
   }
 }

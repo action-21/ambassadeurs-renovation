@@ -10,9 +10,9 @@ const { class: className = "" } = Astro.props;
 const pathname = Astro.url.pathname;
 
 const paths = [
-    { name: "/mon-audit", title: "Mon audit", icon: "search-building" },
-    { name: "/mes-gestes", title: "Mes gestes", icon: "target" },
-    { name: "/ressources", title: "Ressources", icon: "toolbox" },
+    { name: "/mon-audit/recherche", title: "Mon audit", icon: "search-building", match: "/mon-audit" },
+    { name: "/mes-gestes/projet", title: "Mes gestes", icon: "target", match: "/mes-gestes" },
+    { name: "/ressources", title: "Ressources", icon: "toolbox", match: "/ressources" },
 ];
 ---
 
@@ -23,7 +23,7 @@ const paths = [
                 href={path.name}
                 class:list={[
                     "h-full grow px-5 py-2 flex flex-col md:flex-row items-center justify-center",
-                    { active: pathname.includes(path.name) },
+                    { active: pathname.includes(path.match) },
                 ]}
             >
                 <Icon
