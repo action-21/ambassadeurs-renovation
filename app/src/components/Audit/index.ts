@@ -1,6 +1,7 @@
 export { default as Recherche } from './Recherche.astro'
 export { default as ConfortEte } from './ConfortEte.astro'
 export { default as Consommations } from './Consommations.astro'
+export { default as Equipements } from './Equipements.astro'
 export { default as Gestes } from './Gestes.astro'
 export { default as InformationLogement } from './InformationLogement.astro'
 export { default as PerformanceClimatique } from './PerformanceClimatique.astro'

@@ -7,6 +7,7 @@ import { Dialog, DialogHeader } from "../../components/Dialog";
 import {
 	ConfortEte,
 	Consommations,
+	Equipements,
 	InformationLogement,
 	PerformanceClimatique,
 	PerformanceEnergetique,
@@ -86,6 +87,12 @@ if (null === audit) {
 						portes={audit.enveloppe.portes}
 						ponts_thermiques={audit.enveloppe.ponts_thermiques}
 					/>
+
+					<Equipements
+						chauffage={audit.chauffage}
+						ecs={audit.ecs}
+						ventilation={audit.ventilation}
+						refroidissement={audit.refroidissement} />
 				</div>
 			</div>
 		</Main>

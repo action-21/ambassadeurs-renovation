@@ -5,61 +5,63 @@ Aider les futurs professionnels du bâtiment à relever le défi de la rénovati
 > [!NOTE]  
 > Projet en cours de développement.
 
-## L'essentiel
+## 🚀 Quoi ?
 
-Le programme des Ambassadeurs de la Rénovation vise à développer une culture commune de la performance énergétique chez les futurs professionnels du bâtiment en adaptant les programmes pédagogiques FEEBAT aux besoins des formateurs, apprenants et organismes de formation.
+Le projet des Ambassadeurs de la Rénovation est un programme pédagogique d'initiation à la performance énergétique des logements à destination des formateurs du BTP, en complément des ressources FEEBAT en cours de déploiement.
 
-Pour y parvenir, nous développons des communs pédagogiques (fiches synthétiques, supports d'évaluation) libres d'accès et parions sur l'utilisation d'outils numériques open source pour permettre aux apprenants s'approprier le sujet de la rénovation énergétique par la pratique en situation réelle.
+Le programme pédagogique est composé en trois parties :
 
-## Contexte
+- Un **socle commun de compétences**, garantissant une approche globale et commune de la performance énergétique ;
+- Une « **Fresque de la rénovation** », un atelier pédagogique pour comprendre les enjeux, les étapes et les bénéfices de la rénovation énergétique, animée par le formateur ;
+- Une **application pédagogique open source** dédiée à la compréhension de la performance énergétique des logements par le DPE et l'audit réglementaire, à destination des formateurs et apprenants du BTP.
 
-Chaque année près de 50 000 jeunes sont formés à un métier relevant de la rénovation énergétique (maçon, couvreur, plaquiste, chauffagiste…). Cependant, très peu d'entre eux sortent de leurs parcours de formation avec les compétences leur permettant de contribuer à l'un des plus grands enjeux depuis la reconstruction d'après-guerre : rénover l'ensemble du parc résidentiel à un niveau BBC à l'horizon 2050.
+En complément, la mention « Ambassadeur Rénov' » adossée aux certifications existantes permet aux organismes de formation de développer les **passerelles** avec des certifications existantes – Chargé d'accompagnement à la rénovation énergétique – ou à créer pour alimenter la filière du BTP de la main d'œuvre nécessaire pour massifier la rénovation énergétique.
 
-La généralisation d'une culture commune de la performance énergétique chez les futurs professionnels du bâtiment est par conséquent un enjeu clé pour la massification de la rénovation. Pour y parvenir, le programme FEEBAT accompagne la filière depuis 2007 en proposant les ressources pédagogiques et formations à destination des formateurs et des apprenants.
+## 🌍 Pourquoi ?
 
-Cette ingénierie pédagogique doit cependant être adaptée aux réalités des organismes de formation qui ne disposent pas tous des même capacités d'intégration des contenus aux parcours de formation existants.
+La Stratégie Nationale Bas Carbone (SNBC) vise la rénovation performante de 28 000 000 de logements d'ici 2050, soit un rythme de **750 000 à 1 000 000** de rénovations performantes par an.
 
-## Enjeux
+Ce chantier d'une ampleur jamais vue depuis la reconstruction d'après-guerre pose deux questions majeures : comment disposer des compétences suffisantes pour suivre ce rythme, et tout aussi important pour ne pas dégrader la performance des bâtiments rénovés.
+En d'autres termes comment **faire et ne pas défaire** la rénovation énergétique des logements.
 
-Généraliser un programme de formation à la rénovation énergétique à des centaines de qualifications professionnelles couvrant une dizaine de métiers différents pose de nombreuses questions d'intégration pédagogique.
+Une partie de la réponse à ces questions se trouve dans les filières de formation aux métiers du bâtiment, d'où sortent chaque année **100 000 nouveaux diplômés**. Un chiffre à comparer aux **60 000 entreprise qualifiées « RGE »** pour réaliser des travaux de rénovation énergétique.
 
-Pour le **formateur** :
+Ce gisement des rénovateurs de demain reste sous-exploité : les référentiels de compétences n'intègrent pas l'enjeu de la performance énergétique, et les moyens pédagogiques mis à la disposition des formateurs ne sont pas suffisants pour pallier le **manque de temps** dont ils disposent pour intégrer ces nouvelles compétences à un programme déjà chargé.
 
-- Comment identifier les savoirs clés de la performance énergétique à intégrer aux programmes ?
-- Comment intégrer de nouveaux objectifs pédagogiques dans les programmes existants à temps constant ? Sur quels supports pédagogiques d'appuyer ?
+Dans ce contexte, le projet des Ambassadeurs de la rénovation propose un **programme pédagogique adapté** aux besoins des formateurs par la combinaison d'un** atelier collaboratif** qui a fait ces preuves – la Fresque de la rénovation – et d'une **application pédagogique** « hors murs ».
 
-Pour l'**apprenant** :
+La généralisation de cette approche dans l'ensemble des organismes de formation du BTP offre la garantie d'une **compréhension globale** de la performance énergétique partagée par l'**ensemble des métiers du bâtiment**.
 
-- Comment s'approprier le sujet de la rénovation énergétique ? Donner envie de faire ?
-- Comment s'inscrire dans un parcours de formation dédié à un métier de la rénovation énergétique ?
+## ⚙️ Comment ?
 
-Pour l'**organisme de formation** :
+1. Publication du **Socle commun de compétences** de la performance énergétique.
+2. Développement de l'**application pédagogique open source** dédiée à la compréhension de la performance énergétique des logements par le DPE et l'audit réglementaire.
+3. **Expérimentation** du programme pédagogique en **situation réelle**.
+4. **Formation de « Fresqueurs »** de la rénovation dans les organismes de formation du BTP.
+5. Intégration de la **Fresque de la rénovation** dans les programmes de formation du BTP.
+6. Déploiement de l'application pédagogique auprès des **formateurs et apprenants** du BTP.
+7. Déploiement des parcours de formations – mention **Ambassadeur Rénov'**.
+8. Développement des **passerelles** entre les Ambassadeurs de la Rénovation, RGE, et métiers de l'accompagnement.
 
-- Comment adapter l'offre de formation aux nouveaux besoins en matière de performance énergétique ?
-- Comment faciliter les ponts entre les métiers du bâtiment et de la rénovation énergétique ?
+## 🎯 Pour qui ?
 
-## Solutions
+- Organismes de formation du BTP
+- Formateurs du BTP
+- Apprenants du BTP
 
-Le **Socle commun de connaissances** regroupe l'ensemble des compétences permettant de développer une culture partagée de la performance énergétique afin de préparer à l'exercice des métiers du bâtiment dans un contexte de généralisation de la performance énergétique.
+## 🤝 Avec qui ?
 
-**Mon Audit Rénov'** est une application publique et gratuite qui permet aux apprenants du bâtiment d'analyser la performance énergétique d'un logement en situation réelle (base DPE-Audit) et de simuler l'impact d'un programme de rénovation en prenant en compte les limites d'intervention (interfaces, interactions et points de vigilance).
+- Organismes de formation du BTP
+- CCCA-BTP
 
-Les **Communs de la performance énergétique** est une bibliothèque de ressources libres d'accès existantes (Profeel, Feebat, Ademe…) ou spécifiquement produites dans le cadre du programme des Ambassadeurs de la rénovation. C'est le cas notamment des fiches synthétique et supports d'évaluation à destination des formateurs.
+## 📍 Où ?
 
-Les **Open badges de la rénovation** permettent de valoriser les compétences acquises en matière de performance énergétique afin de favoriser les ponts avec les parcours de formation aux métiers de la rénovation énergétique (conception, encadrement ou exécution des travaux).
+Le projet des Ambassadeurs de la rénovation sera expérimenté par les organismes de formation du BTP-CFA d'Occitanie.
 
-Toutes les ressources produites dans le cadre du programme des Ambassadeurs de la rénovation sont gratuites, libres d'utilisation et en open source.
+L'objectif est d'étendre le projet à l'ensemble des organismes de formation du BTP.
 
-## Stratégie
+## 📆 Quand ?
 
-En partenariat avec le BTP CFA d'Occitanie, le programme des Ambassadeurs de la rénovation sera expérimenté en 2025. L'objectif à moyen terme est d'être étendu sur l'ensemble du territoire national en lien avec les programmes existants (FEEBAT, France Rénov').
+Une première expérimentation en situation réelle a été réalisée en juin 2025.
 
-## Porteurs
-
-### BTP CFA d'Occitanie
-
-L'association régionale BTP CFA OCCITANIE, appartient au réseau paritaire BTP CFA, l'outil de formation des branches professionnelles du BTP. Nous formons, dans nos 5 Campus des métiers de la construction (Montpellier, Perpignan, Toulouse-Muret, Lézignan-Corbières et Méjannes-Lès-Alès), près de 3 600 apprenants en alternance, et nous avons accompagné plus 400 jeunes dans le cadre de Prépa Apprentissage en proposant 67 formations certifiantes du CAP au BTS et Titres Professionnels.
-
-### Action 21
-
-ACTION 21 est une association loi 1901 de recherche, développement et de promotion de communs numériques pour faire face aux défis énergétiques et climatiques. Dans ce cadre, nous proposons des solutions d'intérêt général libres de droit (open source) pour produire des effets là où le marché seul échoue.
+Une seconde expérimentation en situation réelle est prévue à la rentrée 2025
